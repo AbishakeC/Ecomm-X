@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap'); */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #050508;
+  color: #e2e8f0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0a0f; }
+::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #818cf8; }
+
+/* Custom utility classes */
+@layer components {
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-dark text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-accent/30 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-dark-700 hover:bg-dark-600 text-slate-200 font-medium px-6 py-3 rounded-xl border border-dark-500 hover:border-accent/50 transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-dark-800 border border-dark-600 rounded-2xl overflow-hidden transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1;
+  }
+
+  .input-field {
+    @apply w-full bg-dark-700 border border-dark-500 rounded-xl px-4 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all duration-200;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .section-title {
+    @apply font-display text-2xl md:text-3xl font-bold text-white tracking-tight;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-light via-purple-400 to-pink-400 bg-clip-text text-transparent;
+  }
+
+  .glass {
+    @apply bg-dark-800/60 backdrop-blur-md border border-dark-600/50;
+  }
+}
+
+/* Animated background grid */
+.bg-grid {
+  background-image: 
+    linear-gradient(rgba(99,102,241,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Glow effects */
+.glow-accent {
+  box-shadow: 0 0 20px rgba(99,102,241,0.3), 0 0 60px rgba(99,102,241,0.1);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(99,102,241,0.5);
+}
+
+/* Animate on load */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Star rating */
+.star-filled { color: #fbbf24; }
+.star-empty { color: #374151; }
+
+/* Toast customization */
+.toast-dark {
+  background: #1a1a24 !important;
+  color: #e2e8f0 !important;
+  border: 1px solid #2d2d3d !important;
+}
