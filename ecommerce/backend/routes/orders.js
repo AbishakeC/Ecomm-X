@@ -5,7 +5,7 @@ const Product = require('../models/Product');
 const { protect, adminOnly } = require('../middleware/auth');
 
 // @route POST /api/orders
-router.post('/', protect, async (req, res) => {
+router.post('/', protect, async (req, res) => { 
   try {
     const { items, shippingAddress, paymentMethod } = req.body;
 
