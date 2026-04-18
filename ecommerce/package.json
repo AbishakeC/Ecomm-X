@@ -1,0 +1,10 @@
+{
+  "name": "ecommerce-monorepo",
+  "private": true,
+  "description": "Build frontend + install backend for deployment",
+  "scripts": {
+    "build": "npm run build --prefix frontend",
+    "install:all": "npm install --prefix frontend && npm install --prefix backend",
+    "start": "npm start --prefix backend"
+  }
+}

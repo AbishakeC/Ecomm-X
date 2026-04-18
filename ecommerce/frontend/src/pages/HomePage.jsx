@@ -35,7 +35,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-purple-900/10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-800 via-transparent to-purple-900/10 pointer-events-none" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
@@ -48,7 +48,7 @@ export default function HomePage() {
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
               THE FUTURE OF
               <br />
-              <span className="gradient-text text-glow">SHOPPING</span>
+              <span className=" text-glow">SHOPPING</span>
               <br />
               <span className="text-slate-400 text-4xl sm:text-5xl lg:text-6xl">IS HERE.</span>
             </h1>
